@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+  <title>Grid</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <style>
+    h1 {
+      font-size:45px;
+      text-align: center;
+      border-bottom:1px solid gray;
+      margin:0;
+      padding:20px;
+    }
+    ol{
+      border-right:1px solid gray;
+      width:100px;
+      margin:0;
+      padding:20px;
+    }
+    #grid{
+      display: grid;
+      grid-template-columns: 150px 1fr;
+    }
+    #grid ol{
+      padding-left:33px;
+    }
+    #grid #article{
+      padding-left:25px;
+    }
+    .firefly {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    h3 {
+      border: 2px solid red;
+      border-left: 50px;
+    }
+
+
+
+
+
+
+  </style>
+  <h1>Grid</h1>
+  <div id="grid">
+    <ol>
+      <li>Grid란?</li>
+      <li>CSS</li>
+      <li>box model</li>
+    </ol>
+    <div id="article">
+        <h2>Grid란? </h2>
+        <p>CSS 레이아웃 잘 짤 수 있도록 있는 기능 
+        <br>Grid를 잘 사용하면 지금 보는 것과 같이 block level element랑 inline element에 관계 없이 배치를 자유자재로 할 수 있음
+        </p>
+        <p>Grid의 기능은 다양하지만 그 중에서 지금과 같은 형태로 배치하는 법을 알아보자</p>
+        <p>Grid를 사용할 때에는 div라는 태그로 배치하고 싶은 태그를 감싸줘야함. <code><br><br> ex) &lt; div &gt; <br> &lt; p &gt; <br> &lt; /p &gt; <br> &lt; /div &gt;
+          <br></code><br>
+          &lt; div &gt;는 아무 기능이 없는 태그이며 그저 태그들을 묶어서 css를 적용할 때에 쓰는 태그임. 
+          아무튼 div로 태그를 묶었으면 div에 class나 id를 추가해준다.
+          <code><br><br> ex) &lt; div id="grid" &gt; <br> &lt; p &gt; <br> &lt; /p &gt; <br> &lt; /div &gt;
+            <br></code><br>
+          이런 식으로 id나 class를 추가했다면 style 태그 안에 해당 id나 class에게 속성을 부여해줘야한다.
+          <br>
+          display 속성은 해당 태그의 element를 바꿔주는 속성이다.
+          <br>
+          이 속성을 사용해서 div 태그의 속성을 grid로 바꿔줄 수 있다.
+          <br>
+          바꾸는 방법은 display: grid; 라고 쓰면 된다. 그러나 이렇게만 하면 아무런 변화도 없을 건데 
+          <br>
+          element가 grid인 상태일 때 적용할 수 있는 속성이 있다. 그 중에서 grid-template-columns 라는 속성을 사용하면 된다.
+          <br>
+          grid-template-columns 뒤에 2가지 숫자가 들어가는데 각 숫자는 Grid로 배치할 때 해당 태그의 크기를 의미한다. 
+          <br>
+          또한 첫 번째 숫자를 넣고 1fr을 넣으면 두 번째 태그는 자동으로 남은 공간을 채워준다
+          <code><br><br> ex) &lt; style &gt; <br> &lt; #grid &gt; <br> &lt; /p &gt; <br> &lt; /div &gt;
+            </code>
+        </div></p> 
+        <br>
+        글로만 설명해서 이해가 잘 안될수도 있지만 아래 영상 두개를 보면 이해가 쉬워질 것 같다. 
+        <br><br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/M1eQFIBY2vI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+       <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/AL8RSY8rADY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+  </div>
+</body>
+  </html>
